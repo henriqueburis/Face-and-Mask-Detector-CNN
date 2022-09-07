@@ -19,3 +19,9 @@ you can now carry out "run" the python scrypt with the following command:
 python3 CNN.py --dataset "face"  --model "vgg19" --train Mask_set/train --test Mask_set/test --n_classe 2 --input_size 32 --epoch 20
 
 ```
+
+
+```sh
+python3 facedetcta.py 
+
+```
