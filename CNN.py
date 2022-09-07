@@ -84,11 +84,11 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 #net = models.resnet50(pretrained=True)
 #net = torchvision.models.vgg16(pretrained=True)
 net = torchvision.models.vgg19(pretrained=True)
-net.classifier[6] = nn.Linear(4096,args.n_classe)
+net.classifier[6] = nn.Linear(net.fc.in_features,args.n_classe) # utilizado no vggs
 
-#modules = list(list_net)
+#modules = list(net.children())[:-1]
 #modules.append(nn.Flatten())
-#modules.append(nn.Linear(4096,args.n_classe))
+#modules.append(nn.Linear(net.fc.in_features,args.n_classe))
 #net = nn.Sequential(*modules)
 net = net.to(device)
 
