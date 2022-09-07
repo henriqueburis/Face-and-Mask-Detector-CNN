@@ -2,7 +2,7 @@
 
 By [Luiz H. Buris](http://)
 
-##Introdução
+## Introdução
 
 A epidemia de COVID-19 interrompeu rapidamente nossas vidas cotidianas, afetando o comércio e os movimentos internacionais. Usar uma máscara facial para proteger o rosto tornou-se o novo normal. Em um futuro próximo, muitos prestadores de serviços públicos esperam que os clientes usem máscaras adequadamente para participar de seus serviços. Portanto, a detecção de máscara facial tornou-se um dever crítico para ajudar a civilização mundial.
 
