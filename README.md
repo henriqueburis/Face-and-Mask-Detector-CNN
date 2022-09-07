@@ -1,4 +1,4 @@
-# Face-and-Mask-Detector-CNN
+# Face mask recognition system using CNN model
 
 By [Luiz H. Buris](http://)
 
