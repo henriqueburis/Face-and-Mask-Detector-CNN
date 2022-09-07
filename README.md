@@ -10,6 +10,9 @@ Neste entendimento este trabalho fornece uma maneira simples de alcançar este o
 
 A técnica sugerida reconhece com sucesso o rosto na imagem ou vídeo e, em seguida, determina se ele tem ou não uma máscara. Como um angente de trabalho de vigilância, ele também pode reconhecer um rosto com uma máscara em movimento, bem como em um vídeo. A técnica atinge excelente precisão. Investigamos valores de parâmetros ótimos para o modelo de Rede Neural Convolucional (CNN) de modo a identificar a existência de máscaras com precisão sem gerar overfitting.
 
+
+![](https://github.com/henriqueburis/Face-and-Mask-Detector-CNN/blob/main/fig/faceDetection.PNG)
+
 ## Code organization
 
 - `CNN`: .
