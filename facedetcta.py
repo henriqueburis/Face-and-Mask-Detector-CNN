@@ -6,7 +6,7 @@ import numpy as np
 import imutils
 import tensorflow as tf
 from torchvision import transforms
-from keras.preprocessing.image import img_to_array
+#from keras.preprocessing.image import img_to_array
 #from google.colab.patches import cv2_imshow
 
 
@@ -20,18 +20,25 @@ transform = transforms.Compose([
 print('==> Building model..')
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(device) #CPU ou Cuda
-net = torchvision.models.vgg19(pretrained=True)
-net.classifier[6] = nn.Linear(4096,2) # dois rotulos
+net = torchvision.models.resnet50(pretrained=True)
+#net = torchvision.models.vgg19(pretrained=True)
+#net.classifier[6] = nn.Linear(4096,2) # dois rotulos
+
+modules = list(net.children())[:-1]
+modules.append(nn.Flatten())
+modules.append(nn.Linear(net.fc.in_features,2))
+net = nn.Sequential(*modules)
+net = net.to(device)
 
 model = net.to(device)
+print('==> load model..')
+model.load_state_dict(torch.load("results/CNN_face_vgg19_face_model.pt",map_location=device)) # carregar o modelo treinado "CNN"
+print('==> load detector..')
+detector = cv2.CascadeClassifier("Data_haarcascade/haarcascade_frontalface_default.xml")
 
-model.load_state_dict(torch.load("/content/results/CNN_face_vgg19_face_model.pt",map_location=device)) # carregar o modelo treinado "CNN"
-
-detector = cv2.CascadeClassifier("/content/haarcascade_frontalface_default.xml")
-
-
+print('==> load video or cam..')
 #camera = cv2.VideoCapture(0) # usar uma camemra
-camera = cv2.VideoCapture("/content/5423887.mp4") # carregar o video
+camera = cv2.VideoCapture("23245978_144521.mp4") # carregar o video
 
 model = model.eval()
 while True:
@@ -47,6 +54,7 @@ while True:
   for (fX, fY, fW, fH) in rects:
     
     roi = gray[fY:fY + fH, fX:fX + fW]
+    cv2.imshow('roi', cv2.cvtColor(roi, cv2.COLOR_BGR2RGB))
     tensor_roi = transform(roi) # transformar image recortada em tensor para o modelo inferir.
 
     outputs = model(tensor_roi.unsqueeze(0)) # predizer a img
