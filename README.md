@@ -4,7 +4,7 @@ By [Luiz H. Buris](http://)
 
 ## Introdução
 
-A epidemia de COVID-19 interrompeu rapidamente nossas vidas cotidianas, afetando o comércio e os movimentos internacionais. Usar uma máscara facial para proteger o rosto tornou-se o novo normal. Em um futuro próximo, muitos prestadores de serviços públicos esperam que os clientes usem máscaras adequadamente para participar de seus serviços. Portanto, a detecção de máscara facial tornou-se um dever crítico para ajudar a civilização mundial.
+A epidemia de COVID-19 tomou proporções de preocupação mundiais interrompendo rapidamente nossas vidas cotidianas, afetando todos os setores internos e externo de um país inteiro. Usar uma máscara facial para proteger o rosto tornou-se um item de suma importância para proteção individual. Em um futuro próximo, muitos prestadores de serviços públicos esperam que os clientes usem máscaras adequadamente para participar de seus serviços. Portanto, a detecção de máscara facial tornou-se um dever crítico para ajudar a civilização mundial.
 
 Neste entendimento este trabalho fornece uma maneira simples de alcançar este objetivo utilizando de ferramentas fundamentais de visão computacional omo Aprendizado profundo clássico como redes neurais artificiais, Pytorch e OpenCV.
 
