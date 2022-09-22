@@ -12,6 +12,11 @@ A técnica sugerida reconhece com sucesso o rosto na imagem ou vídeo e, em segu
 
 ![](https://github.com/henriqueburis/Face-and-Mask-Detector-CNN/blob/main/fig/faceDetection.PNG)
 
+## Experimento 
+
+![](https://github.com/henriqueburis/Face-and-Mask-Detector-CNN/blob/main/fig/Capturar.PNG)
+
+
 ## Code organization
 
 - `CNN`: .
